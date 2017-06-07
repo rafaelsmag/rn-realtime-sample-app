@@ -56,7 +56,7 @@ var RealtimeRCT = React.createClass({
   },
 
   doSubscribe: function(){
-    RCTRealtimeMessaging.RTSubscribeWithNotifications(this.state.channel, true);
+    RCTRealtimeMessaging.RTSubscribe(this.state.channel, true);
   },
 
   doUnSubscribe: function(){

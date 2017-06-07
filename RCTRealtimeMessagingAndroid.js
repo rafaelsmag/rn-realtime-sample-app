@@ -1,3 +1,12 @@
+//  Created by Joao Caixinha on 02/04/15.
+//  Copyright (c) 2015 Realtime. All rights reserved.
+//
+
+/**
+ * @providesModule RCTRealtimeMessagingAndroid
+ * @flow
+ */
+
 'use strict';
 
 import React, { Component } from 'react';
@@ -50,11 +59,11 @@ class RCTRealtimeMessagingAndroid extends React.Component {
 		ortcClient.unsubscribe(channel, this.id);
 	}
 
-	RTSendMessage(channel, message, ttl){
-		ortcClient.publish(channel, message, ttl, this.id);
+	RTPublishMessage(channel, message, ttl, callBack){
+		ortcClient.publish(channel, message, ttl, this.id, callBack);
 	}
 
-	RTPublishMessage(message, channel){
+	RTSendMessage(message, channel){
 		ortcClient.sendMessage(message, channel, this.id);
 	}
 
