@@ -1,0 +1,5 @@
+rootProject.name = 'chat'
+
+include ':app'
+include ':react-native-realtime-messaging-android'
+project(':react-native-realtime-messaging-android').projectDir = new File(settingsDir,'../node_modules/react-native-realtimemessaging-android/reactnativemessagingandroid')
